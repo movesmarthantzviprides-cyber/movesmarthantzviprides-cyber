@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HVR - HantzVIPRides: Premium Semi-VIP transport in Port Harcourt & Bonny. VIP XX Charters, Executive Fleet, Membership Cards.">
     <title>HVR - HantzVIPRides | Premium Semi-VIP Transport</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .gold { color: #fbbf24; }
         .bg-gold { background: #fbbf24; }
         .border-gold { border-color: #fbbf24; }
-        .hover\:gold:hover { color: #fbbf24; }
+        .hover-gold:hover { color: #fbbf24; }
+        .card-hover:hover { transform: translateY(-5px); transition: 0.3s; }
     </style>
 </head>
 <body>
@@ -20,199 +22,42 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold">HVR <span class="gold">VIPRIDES</span></h1>
             <div class="hidden md:flex gap-6 font-semibold">
-                <a href="#" onclick="showPage('home')" class="hover:gold">HOME</a>
-                <a href="#" onclick="showPage('vip')" class="hover:gold">VIP CLUB</a>
-                <a href="#" onclick="showPage('benefits')" class="hover:gold">BENEFITS</a>
-                <a href="#" onclick="showPage('safety')" class="hover:gold">SAFETY</a>
-                <a href="#" onclick="showPage('join')" class="hover:gold">JOIN HVR</a>
-                <a href="#" onclick="showPage('contact')" class="hover:gold">CONTACT</a>
+                <a href="#home" class="hover-gold">HOME</a>
+                <a href="#vip" class="hover-gold">VIP CLUB</a>
+                <a href="#benefits" class="hover-gold">BENEFITS</a>
+                <a href="#safety" class="hover-gold">SAFETY</a>
+                <a href="#join" class="hover-gold">JOIN HVR</a>
+                <a href="#contact" class="hover-gold">CONTACT</a>
             </div>
         </div>
     </nav>
 
-    <!-- CONTENT -->
-    <div id="content"></div>
-
-    <!-- FOOTER -->
-    <footer class="bg-zinc-950 border-t border-zinc-800 py-8 mt-12">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="gold font-bold mb-2">HVR - HANTZVIPRIDES</p>
-            <p class="text-sm text-zinc-400">Premium Semi-VIP Transport Services</p>
-            <p class="text-xs text-zinc-500 mt-4">B.I.N: [ADD YOUR B.I.N] | © 2026 HVR. All Rights Reserved.</p>
+    <!-- HOME / HERO -->
+    <section id="home" class="max-w-6xl mx-auto px-6 py-16">
+        <h1 class="text-5xl md:text-6xl font-bold text-center mb-4">WELCOME TO HVR</h1>
+        <p class="text-center text-zinc-400 text-lg mb-12">Premium Semi-VIP Transport | Port Harcourt • Bonny Island</p>
+        
+        <!-- ROUTES -->
+        <div class="bg-zinc-900 p-8 rounded-3xl mb-16 card-hover">
+            <h2 class="text-3xl font-bold mb-6 text-center gold">OUR ROUTES</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-black p-6 rounded-2xl border border-zinc-800">
+                    <h3 class="text-2xl font-bold gold mb-2">PORT HARCOURT</h3>
+                    <p class="text-zinc-400">Multiple boarding axes available</p>
+                </div>
+                <div class="bg-black p-6 rounded-2xl border border-zinc-800">
+                    <h3 class="text-2xl font-bold gold mb-2">BONNY ISLAND</h3>
+                    <p class="text-zinc-400">Fare: N6,000 - N12,000 depends on boarding axis</p>
+                </div>
+            </div>
         </div>
-    </footer>
 
-<script>
-function showPage(page) {
-    const content = document.getElementById('content');
-    
-    if (page === 'home') {
-        content.innerHTML = `
-        <div class="max-w-6xl mx-auto px-6 py-12">
-            <h1 class="text-5xl font-bold text-center mb-4">WELCOME TO HVR</h1>
-            <p class="text-center text-zinc-400 mb-12">Port Harcourt • Bonny • VIP Transport</p>
-            
-            <!-- ROUTES -->
-            <div class="bg-zinc-900 p-8 rounded-3xl mb-12">
-                <h2 class="text-3xl font-bold mb-6 text-center">OUR ROUTES</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-black p-6 rounded-2xl">
-                        <h3 class="text-2xl font-bold gold mb-2">PORT HARCOURT</h3>
-                        <p class="text-zinc-400">Multiple boarding axes available</p>
-                    </div>
-                    <div class="bg-black p-6 rounded-2xl">
-                        <h3 class="text-2xl font-bold gold mb-2">BONNY ISLAND</h3>
-                        <p class="text-zinc-400">Fare: N6,000 - N12,000 depends on boarding axis</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FLEET -->
-            <h2 class="text-4xl font-bold text-center mb-4">OUR FLEET</h2>
-            <p class="text-center text-zinc-400 mb-12">Travel In Comfort. Choose Your Class.</p>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="bg-gradient-to-br from-amber-400 to-yellow-500 text-black p-8 rounded-3xl">
-                    <h3 class="text-3xl font-bold mb-2">XX CLASS</h3>
-                    <p class="font-bold mb-4">(WITH AC) • PREMIUM CHARTER</p>
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX SUV</div>
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX SIENNA</div>
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX COASTER</div>
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX CAMRY</div>
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX COROLLA</div>
-                        <div class="bg-black text-amber-400 p-3 rounded-xl text-center font-bold">EX HIACE</div>
-                    </div>
-                    <p class="text-sm mt-4">*Price based on Pickup & Drop-off. Very Negotiable*</p>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl">
-                    <h3 class="text-3xl font-bold gold mb-2">SEMI VIP</h3>
-                    <p class="text-zinc-400 mb-4">SHARED & PRIVATE RIDES</p>
-                    <div class="space-y-3">
-                        <div class="bg-black p-3 rounded-xl font-bold">• 18 Seater Hiace Bus</div>
-                        <div class="bg-black p-3 rounded-xl font-bold">• 14 Seater Bus</div>
-                        <div class="bg-black p-3 rounded-xl font-bold">• Mini (Keke) Bus</div>
-                        <div class="bg-black p-3 rounded-xl font-bold">• Camry</div>
-                        <div class="bg-black p-3 rounded-xl font-bold">• Sienna</div>
-                    </div>
-                </div>
-            </div>
-        </div>`;
-    }
-
-    else if (page === 'vip') {
-        content.innerHTML = `
-        <div class="max-w-6xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold text-center mb-12">VIP CLUB</h1>
-            
-            <!-- VIP XX -->
-            <div class="bg-zinc-900 border-2 border-amber-400 p-10 rounded-3xl mb-10">
-                <h2 class="text-4xl font-bold gold text-center mb-2">VIP XX</h2>
-                <p class="text-center text-zinc-400 mb-8">THE ULTIMATE CHARTER EXPERIENCE</p>
-                <div class="grid md:grid-cols-3 gap-6 text-center mb-8">
-                    <div class="bg-black p-6 rounded-2xl"><p class="font-bold text-lg">100% CHARTER</p></div>
-                    <div class="bg-black p-6 rounded-2xl"><p class="font-bold text-lg">CUSTOM ROUTES</p></div>
-                    <div class="bg-black p-6 rounded-2xl"><p class="font-bold text-lg">VERY NEGOTIABLE</p></div>
-                </div>
-                <a href="https://wa.me/2348085526104?text=Hello%20HantzVIPRides,%20I%20want%20VIP%20XX%20Charter" target="_blank" class="block bg-amber-400 text-black py-4 rounded-2xl font-bold text-center text-lg">WhatsApp Charter</a>
-            </div>
-
-            <!-- HVR CARDS -->
-            <h2 class="text-4xl font-bold text-center mb-12">HVR MEMBERSHIP CARDS</h2>
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="bg-gradient-to-b from-yellow-500 to-amber-600 text-black p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold text-center">HVR GOLD CARD</h3>
-                    <p class="font-bold text-center mb-4">FOR GOLDEN VIP PASSENGERS</p>
-                    <ul class="space-y-2 text-sm font-semibold"><li>• 5% Off Bookings</li><li>• Priority Boarding</li></ul>
-                </div>
-                <div class="bg-gradient-to-b from-zinc-300 to-zinc-500 text-black p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold text-center">HVR PLATFORM CARD</h3>
-                    <p class="font-bold text-center mb-4">FOR PLATINUM VIPX</p>
-                    <ul class="space-y-2 text-sm font-semibold"><li>• 10% Off Bookings</li><li>• VIP Lounge Access</li></ul>
-                </div>
-                <div class="bg-gradient-to-b from-cyan-300 to-indigo-600 text-white p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold text-center">HVR DIAMOND CARD</h3>
-                    <p class="font-bold text-center mb-4">FOR VIPXXX CORPORATE</p>
-                    <ul class="space-y-2 text-sm font-semibold"><li>• 15% Off + Charter Discounts</li><li>• 24/7 Concierge</li></ul>
-                </div>
-            </div>
-
-            <!-- CONCESSIONS + HOTEL AGENTS -->
-            <div class="bg-zinc-900 p-8 rounded-3xl">
-                <h2 class="text-2xl font-bold gold mb-4">EARLY BOOKING CONCESSIONS</h2>
-                <p class="mb-2">5% - 7 Days | 3% - 5 Days | 2.5% - 3 Days</p>
-                <div class="bg-gradient-to-br from-amber-400 to-yellow-500 text-black p-6 rounded-2xl mt-6">
-                    <h3 class="font-bold text-xl">EXECUTIVE AGENTS - HOTELS</h3>
-                    <p class="text-3xl font-bold">10% COMMISSION</p>
-                    <p class="text-sm">For VIP XX Charter Referrals</p>
-                </div>
-            </div>
-        </div>`;
-    }
-
-    else if (page === 'benefits') {
-        content.innerHTML = `
-        <div class="max-w-6xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold text-center mb-12">BENEFITS & POLICIES</h1>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">OFFICIAL BANKER</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">OFFICIAL INSURER</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">GROUP INSURANCE COVERAGE</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">VEHICLE LOAN OPPORTUNITIES</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">VEHICLE SECURITY PASS</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">VEHICLE TRACKER</h3></div>
-            </div>
-            <div class="bg-zinc-900 p-8 rounded-3xl mt-8">
-                <h2 class="text-2xl font-bold gold mb-4">B.I.N</h2>
-                <p class="text-xl font-bold">Business Identification Number: [ADD YOUR B.I.N]</p>
-            </div>
-        </div>`;
-    }
-
-    else if (page === 'safety') {
-        content.innerHTML = `
-        <div class="max-w-6xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold text-center mb-12">SAFETY & PROGRAMS</h1>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">END OF YEAR AWARDS & GALA</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">DRIVERS ASSESSMENT & BRIEFINGS</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">HEALTH, SAFETY & SECURITY</h3></div>
-                <div class="bg-zinc-900 p-6 rounded-2xl"><h3 class="font-bold gold">CONFIDENTIALITY</h3></div>
-            </div>
-        </div>`;
-    }
-
-    else if (page === 'join') {
-        content.innerHTML = `
-        <div class="max-w-6xl mx-auto px-6 py-12">
-            <h1 class="text-4xl font-bold text-center mb-12">JOIN THE HVR FAMILY</h1>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-zinc-900 p-8 rounded-3xl">
-                    <h2 class="text-2xl font-bold gold text-center mb-4">DRIVERS / VEHICLES</h2>
-                    <a href="https://wa.me/2348085526104?text=Register%20Driver" target="_blank" class="block bg-amber-400 text-black py-4 rounded-2xl font-bold text-center">Apply Now</a>
-                </div>
-                <div class="bg-zinc-900 p-8 rounded-3xl">
-                    <h2 class="text-2xl font-bold gold text-center mb-4">AGENTS</h2>
-                    <a href="https://wa.me/2348085526104?text=Register%20Agent" target="_blank" class="block bg-green-600 text-white py-4 rounded-2xl font-bold text-center">Apply Now</a>
-                </div>
-                <div class="bg-gradient-to-b from-amber-400 to-yellow-500 text-black p-8 rounded-3xl">
-                    <h2 class="text-2xl font-bold text-center mb-4">EXECUTIVE AGENTS</h2>
-                    <p class="text-center font-bold mb-4">FOR HOTELS - 10% COMMISSION</p>
-                    <a href="https://wa.me/2348085526104?text=Register%20Hotel" target="_blank" class="block bg-black text-amber-400 py-4 rounded-2xl font-bold text-center">Partner With Us</a>
-                </div>
-            </div>
-        </div>`;
-    }
-
-    else if (page === 'contact') {
-        content.innerHTML = `
-        <div class="max-w-4xl mx-auto px-6 py-12 text-center">
-            <h1 class="text-4xl font-bold mb-8">CONTACT HVR</h1>
-            <a href="tel:+2348085526104" class="block bg-amber-400 text-black py-4 rounded-2xl font-bold mb-4 text-lg"><i class="fa-solid fa-phone"></i> +234 808 552 6104</a>
-            <a href="https://wa.me/2348085526104" target="_blank" class="block bg-green-600 text-white py-4 rounded-2xl font-bold text-lg"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
-        </div>`;
-    }
-}
-showPage('home');
-</script>
-</body>
-</html>
+        <!-- FLEET -->
+        <h2 class="text-4xl font-bold text-center mb-4">OUR FLEET</h2>
+        <p class="text-center text-zinc-400 mb-12">Travel In Comfort. Choose Your Class.</p>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- XX CLASS -->
+            <div class="bg-gradient-to-br from-amber-400 to-yellow-500 text-black p-8 rounded-3xl card-hover">
+                <h3 class="text-3xl font-bold mb-2">XX CLASS</h3>
+                <p class="font-bold mb-4">(WITH AC) • PREMIUM CHARTER</p>
+                <div class="grid grid-cols-2 gap-
