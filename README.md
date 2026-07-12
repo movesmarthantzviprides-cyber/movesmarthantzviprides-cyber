@@ -11,7 +11,7 @@ Premium Semi-VIP Transport Services in Port Harcourt & Bonny Island.
 - Group Insurance, Vehicle Loans, Tracker, Security Pass
 
 ## Live Site
-[Add your github-pages link here after deployment]
+https://movesmarthantzvip rides-cyber.github.io/HantzVIPRides-/
 
 ## Contact
 WhatsApp: +234 808 552 6104
