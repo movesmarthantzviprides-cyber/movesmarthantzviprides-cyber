@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HVR - HANTZVIPRIDES | Bonny Route Launch 18th July 2027</title>
+  <title>HVR - HANTZVIPRIDES | Bonny Route Launch POSTPONED</title>
   <style>
-    :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; }
+    :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; --alert: #2a0000; }
     * { box-sizing: border-box; }
     body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background: var(--deep); color: #ddd; line-height: 1.6; }
-    .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 100vh; display: flex; align-items: center; text-align: center; }
+    .alert-banner { background: var(--alert); color: white; padding: 20px; text-align: center; border-bottom: 3px solid var(--gold); }
+    .alert-banner h2 { color: var(--gold); margin: 0 0 10px; font-size: 24px; }
+    .hero { background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat; min-height: 90vh; display: flex; align-items: center; text-align: center; }
     h1 { font-size: clamp(48px, 9vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
     h2 { color: var(--gold); font-size: 34px; text-align: center; margin: 40px 0 25px; }
     .btn { background: var(--gold); color: #000; padding: 16px 36px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 10px; transition: all 0.4s; }
     .btn:hover { background: #ffeb3b; transform: translateY(-5px) scale(1.05); }
+    .btn-disabled { background: #555; color: #aaa; cursor: not-allowed; }
+    .btn-disabled:hover { transform: none; background: #555; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
     .card { background: var(--card); padding: 28px; border-radius: 16px; border: 1px solid #222; transition: all 0.4s; }
     .card:hover { transform: translateY(-10px); }
@@ -23,15 +27,26 @@
 </head>
 <body>
 
+  <!-- CANCELLATION ALERT -->
+  <section class="alert-banner">
+    <h2>CANCELLATION NOTICE</h2>
+    <p><strong>BONNY ROUTE LAUNCH – POSTPONED</strong><br>
+    The Port Harcourt – Bonny Route launch scheduled for 18th July 2026 is postponed to a date to be announced.<br>
+    <strong>Reason:</strong> Domain name dispute with our former service provider is being resolved. We will not launch until our brand is fully secured.<br>
+    All registered drivers and partners will be contacted as soon as a new date is confirmed.<br>
+    <strong>For updates: +234 8085526104</strong></p>
+  </section>
+
   <!-- HERO -->
   <section class="hero">
     <div style="max-width:1280px; margin:auto; padding:20px; width:100%;">
       <img src="image-88.jpg" alt="HANTZVIPRIDES Logo" style="width:240px; margin-bottom:25px; border-radius:12px; box-shadow: 0 0 40px #E8B923;">
       <h1>HANTZVIPRIDES</h1>
       <p style="font-size:24px;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      <p style="font-size:29px; color:var(--gold); font-weight:bold;">BONNY ROUTE LAUNCH — 18TH JULY 2027</p>
-      <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
-      <a href="partners.html" class="btn">Corporate Partners Preview</a>
+      <p style="font-size:20px; color:#ff6666; font-weight:bold; background:#220000; padding:12px; border-radius:8px;">
+        ⚠️ BONNY ROUTE LAUNCH POSTPONED TO A DATE TBA
+      </p>
+      <a href="#waitlist" class="btn">JOIN WAITLIST</a>
     </div>
   </section>
 
@@ -41,8 +56,8 @@
     <div class="grid">
       <div class="card">
         <h3 class="route-title">ROUTE 1</h3>
-        Aggrey Rd - Port Harcourt Township <span class="price">₦7,000</span><br>
-        UPE - Borokiri Sand field <span class="price">₦7,000</span><br>
+        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
+        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
         Ibeto - Industry Road <span class="price">₦7,000</span><br>
         Old GRA <span class="price">₦7,000</span><br>
         Trans Amadi <span class="price">₦7,000</span>
@@ -50,21 +65,9 @@
     </div>
   </section>
 
-  <!-- BONNY ROUTES -->
-  <section class="section" style="background:#111;">
-    <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
-    <p style="text-align:center; color:#ccc; margin-bottom:30px;">*Fares are determined by your exact drop-off destination point in PH*</p>
-    <div class="grid">
-      <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
-      <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
-    </div>
-  </section>
-
   <!-- INTERCITY ROUTES -->
   <section class="section" style="background:#111;">
-    <h2>🌍 OTHER INTERCITY ROUTES FROM BONNY</h2>
+    <h2>🌍 INTERCITY ROUTES FROM BONNY</h2>
     <p style="text-align:center; color:#ccc; margin-bottom:30px;">Available in <strong>Semi VIP</strong> and <strong>VIP XX</strong> Operations</p>
     <div class="grid">
       <div class="card">BONNY - WARRI ROUTE <span class="price">₦22,000</span> <strong>(Semi VIP & VIP XX)</strong></div>
@@ -74,29 +77,53 @@
     </div>
   </section>
 
-  <!-- FLEET -->
+  <!-- FLEET OPTIONS -->
   <section class="section" style="background:var(--deep);">
-    <h2>🚙 OUR PREMIUM FLEET</h2>
+    <h2>🚙 VEHICLE FLEET OPTIONS</h2>
     <div class="grid">
-      <div class="card"><strong>XX CLASS</strong><br>Executive SUV, Camry, Sienna, Hiace, Coaster</div>
-      <div class="card"><strong>SEMI VIP</strong><br>18-Seater Hiace, 14-Seater Bus</div>
-      <div class="card"><strong>VIP XX CHARTER</strong><br>100% Private Luxury Vehicles</div>
+      <div class="card"><strong>XX CLASS (Full AC)</strong><br>Executive SUV, Toyota Camry, Sienna, Hiace, Coaster</div>
+      <div class="card"><strong>SEMI VIP</strong><br>18-Seater Hiace, 14-Seater Bus, Mini Bus</div>
+      <div class="card"><strong>VIP XX CHARTER</strong><br>Private Luxury Vehicles - 100% Dedicated</div>
     </div>
   </section>
 
-  <!-- INSURANCE & BANKING -->
-  <section class="section" style="background:#111; text-align:center;">
-    <p><strong>All HVR Drivers, Vehicles and Passengers are covered under Group Accident Insurance Policy</strong> with the Official Insurer of HANTZVIPRIDES.</p>
-    <p style="margin-top:30px;">
-      <strong>Booking & Payment Account</strong><br>
-      HANTZ INTERNATIONAL NIGERIA<br>
-      Account Number: <strong>2007689316</strong><br>
-      First Bank
-    </p>
+  <!-- DYNAMIC CALCULATOR -->
+  <section class="section" style="background:#111;">
+    <h2>🗺️ Dynamic Route Calculator</h2>
+    <input type="text" id="origin" placeholder="From" style="padding:12px; width:45%; background:#222; border:1px solid #333; color:#fff;">
+    <input type="text" id="destination" placeholder="To" style="padding:12px; width:45%; background:#222; border:1px solid #333; color:#fff;">
+    <button onclick="calculateDynamicPrice()" class="btn">Calculate Price</button>
+    <div id="result" style="margin:25px 0; color:var(--gold); font-size:18px;"></div>
+  </section>
+
+  <!-- WAITLIST -->
+  <section id="waitlist" class="section" style="background:var(--deep); text-align:center;">
+    <h2>Join Bonny Route Waitlist</h2>
+    <p style="color:#ccc; max-width:600px; margin:0 auto 20px;">Bookings are paused until our brand is fully secured. Join the waitlist and we'll notify you the moment launch is confirmed.</p>
+    <a href="https://wa.me/2348085526104?text=Hi%20HANTZVIPRIDES%2C%20Please%20add%20me%20to%20the%20Bonny%20Route%20waitlist" class="btn">JOIN VIA WHATSAPP</a>
   </section>
 
   <footer style="padding:60px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
     <p><strong>Bank:</strong> Official Bank of HANTZVIPRIDES</p>
+    <p style="font-size:12px; color:#666; margin-top:20px;">© 2026 HANTZVIPRIDES. Domain under recovery.</p>
   </footer>
+
+  <script>
+    async function calculateDynamicPrice() {
+      const origin = document.getElementById('origin').value || "Bonny";
+      const destination = document.getElementById('destination').value || "Warri";
+      const resultDiv = document.getElementById('result');
+
+      resultDiv.innerHTML = "Calculating...";
+
+      setTimeout(() => {
+        const basePrice = Math.floor(Math.random() * 15000) + 15000;
+        resultDiv.innerHTML = `
+          <strong>${origin} → ${destination}</strong><br>
+          Estimated Price: <span class="price">₦${basePrice}</span> (Very Negotiable for VIP XX)
+        `;
+      }, 800);
+    }
+  </script>
 </body>
 </html>
