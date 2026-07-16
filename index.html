@@ -41,8 +41,8 @@
     <div class="grid">
       <div class="card">
         <h3 class="route-title">ROUTE 1</h3>
-        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
-        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
+        Aggrey Rd - Port Harcourt Township <span class="price">₦7,000</span><br>
+        UPE - Borokiri Sand field <span class="price">₦7,000</span><br>
         Ibeto - Industry Road <span class="price">₦7,000</span><br>
         Old GRA <span class="price">₦7,000</span><br>
         Trans Amadi <span class="price">₦7,000</span>
@@ -53,6 +53,7 @@
   <!-- BONNY ROUTES -->
   <section class="section" style="background:#111;">
     <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
+    <p style="text-align:center; color:#ccc; margin-bottom:30px;">*Fares are determined by your exact drop-off destination point in PH*</p>
     <div class="grid">
       <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
       <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
@@ -83,47 +84,8 @@
     </div>
   </section>
 
-  <!-- DRIVERS SITUATION ROOM -->
-  <section class="section" style="background:#111;">
-    <h2>🚦 DRIVERS SITUATION ROOM - LIVE</h2>
-    <div class="card" style="background:#1a1a1a; text-align:center;">
-      <p><strong>PHC → BNY Departures:</strong> 6am, 7am, 8am, 9am, 10am, 11am, 12noon, 1pm, 2pm, 3pm, 5pm</p>
-      <p><strong>BNY → PHC Departures:</strong> 7am, 8am, 9am, 10am, 11am, 12noon, 1pm, 2pm, 3pm, 4pm, 5pm, 6pm</p>
-      <div id="live-status" style="margin-top:20px; padding:20px; background:#222; border-radius:8px; font-size:18px;">
-        Loading live bookings...
-      </div>
-    </div>
-  </section>
-
-  <!-- PASSENGER FEEDBACK -->
-  <section class="section" style="background:var(--deep); text-align:center;">
-    <h2>💬 Passenger Feedback</h2>
-    <a href="https://wa.me/2348085526104?text=I%20want%20to%20give%20feedback%20on%20my%20trip" class="btn">Send Feedback via WhatsApp</a>
-  </section>
-
-  <!-- REGISTRATION LINKS -->
-  <section class="section" style="text-align:center; background:#111;">
-    <h2>📋 REGISTRATION FORMS</h2>
-    <a href="applications.html" class="btn">Agents Registration</a>
-    <a href="https://wa.me/2349082483452?text=I%20want%20to%20register%20my%20vehicle" class="btn">Vehicle Registration</a>
-    <a href="https://wa.me/2349082483452?text=I%20want%20to%20register%20as%20Driver" class="btn">Driver Registration</a>
-  </section>
-
   <footer style="padding:60px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
     <p><strong>Bank:</strong> Official Bank of HANTZVIPRIDES</p>
   </footer>
-
-  <script>
-    // Live Situation Room
-    let passengers = 6;
-    setInterval(() => {
-      passengers = Math.min(18, passengers + Math.floor(Math.random() * 3));
-      document.getElementById('live-status').innerHTML = `
-        <strong>Next Trip: PHC → BNY (10:00 AM)</strong><br>
-        Passengers Booked: <strong>${passengers}/18</strong><br>
-        Status: <span style="color:#0f0;">Boarding • Departs in 42 mins</span>
-      `;
-    }, 5000);
-  </script>
 </body>
 </html>
